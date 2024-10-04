@@ -47,15 +47,7 @@ var Vehiculo = /** @class */ (function () {
         return this.Moto;
     };
     Vehiculo.prototype.getDatos = function () {
-        return {
-            "Marca": this.getMarca(),
-            "Modelo": this.getModelo(),
-            "Patente": this.getPatente(),
-            "Annio": this.getAnnio(),
-            "Auto": this.getAuto(),
-            "Camion": this.getCamion(),
-            "Moto": this.getMoto(),
-        };
+        return ("Marca: ".concat(this.getMarca(), "\n      Modelo: ").concat(this.getModelo(), " \n      Patente: ").concat(this.getPatente(), "\n      Annio: ").concat(this.getAnnio(), "\n      Auto: ").concat(this.getAuto(), "\n      Camion: ").concat(this.getCamion(), "\n      Moto: ").concat(this.getMoto()));
     };
     return Vehiculo;
 }());

@@ -10,7 +10,7 @@ var RegistroAutomotor = /** @class */ (function () {
     RegistroAutomotor.prototype.agregarVehiculo = function (nuevoVehiculo) {
         if (nuevoVehiculo instanceof vehiculo_1.Vehiculo) {
             this.vehiculos.push(nuevoVehiculo);
-            console.log("Vehículo agregado:" + nuevoVehiculo.getDatos());
+            console.log("Veh\u00EDculo agregado: ".concat(nuevoVehiculo.getDatos()));
         }
         else {
             console.log("No es un objeto Vehiculo");
@@ -20,7 +20,7 @@ var RegistroAutomotor = /** @class */ (function () {
         var index = this.vehiculos.indexOf(vehiculoEliminar);
         if (index !== -1) {
             this.vehiculos.splice(index, 1);
-            console.log("Vehículo eliminado: " + vehiculoEliminar.getDatos());
+            console.log("Veh\u00EDculo eliminado: ".concat(vehiculoEliminar.getDatos()));
         }
         else {
             console.log("Vehículo no encontrado");
@@ -28,14 +28,14 @@ var RegistroAutomotor = /** @class */ (function () {
     };
     RegistroAutomotor.prototype.modificarVehiculo1 = function (marcaCamb, modeloCamb, patenteCamb, annioCamb, patente1) {
         var index = this.vehiculos.findIndex(function (vehiculos) { return vehiculos.getPatente() === patente1; });
-        console.log("Vehículo encontrado " + index);
+        console.log("Veh\u00EDculo encontrado ".concat(index));
         if (index !== -1) {
             this.vehiculos[index].setMarca(marcaCamb);
             this.vehiculos[index].setModelo(modeloCamb);
             this.vehiculos[index].setPatente(patenteCamb);
             this.vehiculos[index].setAnnio(annioCamb);
             console.log("Vehículo fue modificado");
-            this.vehiculos.forEach(function (vehiculo) { return console.log(vehiculo.getDatos()); });
+            this.vehiculos.forEach(function (vehiculo) { return console.log("".concat(vehiculo.getDatos())); });
         }
         else {
             console.log("Vehículo no encontrado");
@@ -43,7 +43,7 @@ var RegistroAutomotor = /** @class */ (function () {
     };
     RegistroAutomotor.prototype.imprimirListaVehiculos = function () {
         console.log("Lista de vehículos: ");
-        this.vehiculos.forEach(function (vehiculo) { return console.log(vehiculo.getDatos()); });
+        this.vehiculos.forEach(function (vehiculo) { return console.log("".concat(vehiculo.getDatos())); });
     };
     RegistroAutomotor.prototype.getvehiculos = function () {
         return this.vehiculos;
