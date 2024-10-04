@@ -5,7 +5,6 @@ import {Moto} from './moto';
 import {Vehiculo} from './vehiculo';
 
 
-
 //atributos de autos solo Nº puertas
 const auto1 = new Auto(4);
 
@@ -25,7 +24,6 @@ const vehiculo2 = new Vehiculo("Escania", "CR56","GTJ657","1999", undefined,cami
 const vehiculo3 = new Vehiculo("Sanela", "Bt1","PAC422","2001", undefined,undefined, moto1 );
 
 
-
 const registro1 = new RegistroAutomotor();
 registro1.agregarVehiculo(vehiculo1);
 registro1.agregarVehiculo(vehiculo2);
@@ -34,7 +32,6 @@ registro1.imprimirListaVehiculos();
 
 registro1.darDeBajaVehiculo(vehiculo1);
 registro1.imprimirListaVehiculos();
-
 
 registro1.agregarVehiculo(vehiculo1);
 registro1.imprimirListaVehiculos();

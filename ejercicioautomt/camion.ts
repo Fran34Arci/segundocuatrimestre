@@ -3,28 +3,21 @@ export {Camion};
 class Camion {
     //atributos o variables internas
   
-    private capcarga: number;
-
+    private capCarga: number;
     
-
     //constructor
-    constructor(capcarga:number) {
+    constructor(capCarga:number) {
         
-        this.capcarga = capcarga;
+        this.capCarga = capCarga;
         
-
     }
-
 
     //metodos: getters y setters
     getCapcarga(): number {
-        return this.capcarga;
+        return this.capCarga;
     }
-    setCapcarga(nuevocapcarga: number ): void {
-            this.capcarga = nuevocapcarga;
+    setCapcarga(nuevoCapCarga: number ): void {
+            this.capCarga = nuevoCapCarga;
     }
-         
-
-
-  
+     
 }

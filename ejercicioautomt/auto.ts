@@ -4,25 +4,21 @@ export {Auto};
 class Auto {
     //atributos o variables internas
     
-    private numpuertas: number;
+    private numPuertas: number;
 
-   
-    //constructor
-    constructor(numpuertas: number) {
-        
-        this.numpuertas = numpuertas;
-
+       //constructor
+    constructor(numPuertas: number) {
+      
+        this.numPuertas = numPuertas;
     }
-
 
     //metodos: getters y setters
   
     getnumpuertas(): number {
-        return this.numpuertas;
+        return this.numPuertas;
     }
     setnumpuertas(nuevonumpuertas:number): void {
-            this.numpuertas = nuevonumpuertas;
+            this.numPuertas = nuevonumPuertas;
     }
-
   
 }

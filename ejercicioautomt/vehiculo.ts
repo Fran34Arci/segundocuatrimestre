@@ -32,34 +32,33 @@ class Vehiculo {
     }
    
   
-
  //metodos: getters y setters
 getMarca(): string {
     return this.marca;
 }
-setMarca(nuevomarca: string ): void {
-        this.marca = nuevomarca;
+setMarca(nuevoMarca: string ): void {
+        this.marca = nuevoMarca;
 }
      
 getModelo(): string {
     return this.modelo;
 }
-setModelo(nuevomodelo: string): void {
-        this.modelo = nuevomodelo;
+setModelo(nuevoModelo: string): void {
+        this.modelo = nuevoModelo;
 } 
 
 getPatente(): string {
     return this.patente;
 }
-setPatente(nuevopatente: string): void {
-        this.patente = nuevopatente;
+setPatente(nuevoPatente: string): void {
+        this.patente = nuevoPatente;
 }
 
 getAnnio(): string {
     return this.annio;
 }
-setAnnio(nuevoannio: string): void {
-        this.annio = nuevoannio;
+setAnnio(nuevoAnnio: string): void {
+        this.annio = nuevoAnnio;
 }
 
 getAuto(): string {

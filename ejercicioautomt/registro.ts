@@ -2,28 +2,20 @@
 export {RegistroAutomotor};
 import {Vehiculo} from './vehiculo';
 
-
-
         class RegistroAutomotor {
 
             //private vehiculo: Vehiculo;
 
               private vehiculos: Vehiculo[] = [];
 
-              marcacamb: string;
-              modelocamb: string;
-              patentecamb:string; 
-              anniocamb: string;
-              patenteaux :string;
-
+              marcaCamb: string;
+              modeloCamb: string;
+              patenteCamb:string; 
+              annioCamb: string;
+              patenteAux :string;
 
                 constructor() {}
-              
-           // constructor(vehiculo: Vehiculo) {
-             //   this.vehiculo = vehiculo;
-              
-            //}
-          
+                    
             agregarVehiculo(nuevoVehiculo: Vehiculo) {
                 if (nuevoVehiculo instanceof Vehiculo) {
                   this.vehiculos.push(nuevoVehiculo);
@@ -42,18 +34,16 @@ import {Vehiculo} from './vehiculo';
                   console.log("Vehículo no encontrado");
                 }
               }
-
-//atributos marca: string , modelo: string , patente:string, annio: string
-                    
-              modificarVehiculo1(marcacamb,modelocamb,patentecamb,anniocamb,patente1) {
+                
+              modificarVehiculo1(marcaCamb,modeloCamb,patenteCamb,annioCamb,patente1) {
                 const index = this.vehiculos.findIndex((vehiculos) => vehiculos.getPatente() === patente1);
                 console.log("Vehículo encontrado " + index);
 
                 if (index !== -1) {
-                  this.vehiculos[index].setMarca(marcacamb);
-                  this.vehiculos[index].setModelo(modelocamb);
-                  this.vehiculos[index].setPatente(patentecamb);
-                  this.vehiculos[index].setAnnio(anniocamb);
+                  this.vehiculos[index].setMarca(marcaCamb);
+                  this.vehiculos[index].setModelo(modeloCamb);
+                  this.vehiculos[index].setPatente(patenteCamb);
+                  this.vehiculos[index].setAnnio(annioCamb);
 
                   console.log("Vehículo fue modificado" );
                   this.vehiculos.forEach((vehiculo) => console.log(vehiculo.getDatos()));
@@ -62,37 +52,18 @@ import {Vehiculo} from './vehiculo';
                 }
               }
 
-
-
-
-            
               imprimirListaVehiculos() {
                 console.log("Lista de vehículos: ");
                 this.vehiculos.forEach((vehiculo) => console.log(vehiculo.getDatos()));
               }
-
-
-
-              
+    
             getvehiculos(): Vehiculo[] {
-
-                      return this.vehiculos;
+              return this.vehiculos;
                }
-
                setvehiculos(vehiculos: Vehiculo[]) {
                 this.vehiculos = vehiculos;
               }
           
-
-
-
-
-
-
-
-
-
-
           }
       
 
