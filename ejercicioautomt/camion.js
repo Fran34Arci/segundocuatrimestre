@@ -3,15 +3,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Camion = void 0;
 var Camion = /** @class */ (function () {
     //constructor
-    function Camion(capcarga) {
-        this.capcarga = capcarga;
+    function Camion(capCarga) {
+        this.capCarga = capCarga;
     }
     //metodos: getters y setters
     Camion.prototype.getCapcarga = function () {
-        return this.capcarga;
+        return this.capCarga;
     };
-    Camion.prototype.setCapcarga = function (nuevocapcarga) {
-        this.capcarga = nuevocapcarga;
+    Camion.prototype.setCapcarga = function (nuevoCapCarga) {
+        this.capCarga = nuevoCapCarga;
     };
     return Camion;
 }());

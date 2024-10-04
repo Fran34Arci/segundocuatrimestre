@@ -74,13 +74,13 @@ getMoto(): string {
 
 getDatos() {
     return {
-      marca: this.getMarca(),
-      modelo: this.getModelo(),
-      patente: this.getPatente(),
-      año: this.getAnnio(),
-      Auto: this.getAuto(),
-      Camion: this.getCamion(),
-      Moto: this.getMoto(),
+      "Marca": this.getMarca(),
+      "Modelo": this.getModelo(),
+      "Patente": this.getPatente(),
+      "Annio": this.getAnnio(),
+      "Auto": this.getAuto(),
+      "Camion": this.getCamion(),
+      "Moto": this.getMoto(),
     
     };
 }

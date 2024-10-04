@@ -16,26 +16,26 @@ var Vehiculo = /** @class */ (function () {
     Vehiculo.prototype.getMarca = function () {
         return this.marca;
     };
-    Vehiculo.prototype.setMarca = function (nuevomarca) {
-        this.marca = nuevomarca;
+    Vehiculo.prototype.setMarca = function (nuevoMarca) {
+        this.marca = nuevoMarca;
     };
     Vehiculo.prototype.getModelo = function () {
         return this.modelo;
     };
-    Vehiculo.prototype.setModelo = function (nuevomodelo) {
-        this.modelo = nuevomodelo;
+    Vehiculo.prototype.setModelo = function (nuevoModelo) {
+        this.modelo = nuevoModelo;
     };
     Vehiculo.prototype.getPatente = function () {
         return this.patente;
     };
-    Vehiculo.prototype.setPatente = function (nuevopatente) {
-        this.patente = nuevopatente;
+    Vehiculo.prototype.setPatente = function (nuevoPatente) {
+        this.patente = nuevoPatente;
     };
     Vehiculo.prototype.getAnnio = function () {
         return this.annio;
     };
-    Vehiculo.prototype.setAnnio = function (nuevoannio) {
-        this.annio = nuevoannio;
+    Vehiculo.prototype.setAnnio = function (nuevoAnnio) {
+        this.annio = nuevoAnnio;
     };
     Vehiculo.prototype.getAuto = function () {
         return this.Auto;
@@ -48,13 +48,13 @@ var Vehiculo = /** @class */ (function () {
     };
     Vehiculo.prototype.getDatos = function () {
         return {
-            marca: this.getMarca(),
-            modelo: this.getModelo(),
-            patente: this.getPatente(),
-            año: this.getAnnio(),
-            Auto: this.getAuto(),
-            Camion: this.getCamion(),
-            Moto: this.getMoto(),
+            "Marca": this.getMarca(),
+            "Modelo": this.getModelo(),
+            "Patente": this.getPatente(),
+            "Annio": this.getAnnio(),
+            "Auto": this.getAuto(),
+            "Camion": this.getCamion(),
+            "Moto": this.getMoto(),
         };
     };
     return Vehiculo;

@@ -19,7 +19,7 @@ import {Vehiculo} from './vehiculo';
             agregarVehiculo(nuevoVehiculo: Vehiculo) {
                 if (nuevoVehiculo instanceof Vehiculo) {
                   this.vehiculos.push(nuevoVehiculo);
-                  console.log("Vehículo agregado: " + nuevoVehiculo.getDatos());
+                  console.log( "Vehículo agregado:" + nuevoVehiculo.getDatos());
                 } else {
                   console.log("No es un objeto Vehiculo");
                 }
