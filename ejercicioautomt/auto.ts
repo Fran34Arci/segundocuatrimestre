@@ -17,8 +17,8 @@ class Auto {
     getnumpuertas(): number {
         return this.numPuertas;
     }
-    setnumpuertas(nuevonumpuertas:number): void {
-            this.numPuertas = nuevonumPuertas;
+    setnumpuertas(nuevoNumPuertas:number): void {
+            this.numPuertas = nuevoNumPuertas;
     }
   
 }
