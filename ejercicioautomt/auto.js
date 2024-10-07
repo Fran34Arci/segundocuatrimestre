@@ -7,11 +7,14 @@ var Auto = /** @class */ (function () {
         this.numPuertas = numPuertas;
     }
     //metodos: getters y setters
-    Auto.prototype.getnumpuertas = function () {
+    Auto.prototype.getNumPuertas = function () {
         return this.numPuertas;
     };
-    Auto.prototype.setnumpuertas = function (nuevoNumPuertas) {
+    Auto.prototype.setNumPuertas = function (nuevoNumPuertas) {
         this.numPuertas = nuevoNumPuertas;
+    };
+    Auto.prototype.getDatosAuto = function () {
+        return ("N\u00BA Puertas: ".concat(this.getNumPuertas()));
     };
     return Auto;
 }());

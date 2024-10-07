@@ -8,15 +8,15 @@ import {Vehiculo} from './vehiculo';
 
               private vehiculos: Vehiculo[] = [];
 
-              marcaCamb: string;
-              modeloCamb: string;
-              patenteCamb:string; 
-              annioCamb: string;
-              patenteAux :string;
+              private marcaCamb: string;
+              private modeloCamb: string;
+              private patenteCamb:string; 
+              private annioCamb: string;
+              private patenteAux :string;
 
                 constructor() {}
                     
-            agregarVehiculo(nuevoVehiculo: Vehiculo) {
+                public agregarVehiculo(nuevoVehiculo: Vehiculo) {
                 if (nuevoVehiculo instanceof Vehiculo) {
                   this.vehiculos.push(nuevoVehiculo);
                   console.log( `Vehículo agregado: ${nuevoVehiculo.getDatos()}`);
@@ -25,7 +25,7 @@ import {Vehiculo} from './vehiculo';
                 }
             }
 
-            darDeBajaVehiculo(vehiculoEliminar: Vehiculo) {
+            public darDeBajaVehiculo(vehiculoEliminar: Vehiculo) {
                 const index = this.vehiculos.indexOf(vehiculoEliminar);
                 if (index !== -1) {
                   this.vehiculos.splice(index, 1);
@@ -35,7 +35,7 @@ import {Vehiculo} from './vehiculo';
                 }
               }
                 
-              modificarVehiculo1(marcaCamb,modeloCamb,patenteCamb,annioCamb,patente1) {
+              public modificarVehiculo1(marcaCamb,modeloCamb,patenteCamb,annioCamb,patente1) {
                 const index = this.vehiculos.findIndex((vehiculos) => vehiculos.getPatente() === patente1);
                 console.log(`Vehículo encontrado ${index}`);
 
@@ -52,18 +52,22 @@ import {Vehiculo} from './vehiculo';
                 }
               }
 
-              imprimirListaVehiculos() {
+              public imprimirListaVehiculos() {
                 console.log("Lista de vehículos: ");
                 this.vehiculos.forEach((vehiculo) => console.log(`${vehiculo.getDatos()}`));
               }
     
-            getvehiculos(): Vehiculo[] {
+              public getvehiculos(): Vehiculo[] {
               return this.vehiculos;
                }
-               setvehiculos(vehiculos: Vehiculo[]) {
+               public setvehiculos(vehiculos: Vehiculo[]) {
                 this.vehiculos = vehiculos;
               }
           
+
+
+
+              
           }
       
 

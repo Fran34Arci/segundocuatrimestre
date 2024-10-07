@@ -18,7 +18,7 @@ class Vehiculo {
 
 
     //constructor
-    constructor(marca: string , modelo: string , patente:string, annio: string, Auto?:Auto, Camion?:Camion, Moto?:Moto ) {
+    constructor(marca: string , modelo: string , patente:string, annio: string, Auto?:string, Camion?:string, Moto?:string ) {
         
         this.marca = marca;
         this.modelo = modelo;
@@ -27,60 +27,72 @@ class Vehiculo {
 
         this.Auto = Auto;
         this.Camion = Camion;
-        this.Moto= Moto;
+        this.Moto = Moto;
         
     }
    
   
  //metodos: getters y setters
-getMarca(): string {
+public getMarca(): string {
     return this.marca;
 }
-setMarca(nuevoMarca: string ): void {
+public setMarca(nuevoMarca: string ): void {
         this.marca = nuevoMarca;
 }
      
-getModelo(): string {
+public getModelo(): string {
     return this.modelo;
 }
-setModelo(nuevoModelo: string): void {
+public setModelo(nuevoModelo: string): void {
         this.modelo = nuevoModelo;
 } 
 
-getPatente(): string {
+public  getPatente(): string {
     return this.patente;
 }
-setPatente(nuevoPatente: string): void {
+public setPatente(nuevoPatente: string): void {
         this.patente = nuevoPatente;
 }
 
-getAnnio(): string {
+public getAnnio(): string {
     return this.annio;
 }
-setAnnio(nuevoAnnio: string): void {
+public setAnnio(nuevoAnnio: string): void {
         this.annio = nuevoAnnio;
 }
 
-getAuto(): string {
+
+public setAuto(nuevoAuto: Auto): void {
+    this.Auto = nuevoAuto;
+}
+public setCamion(nuevoCamion: Camion): void {
+    this.Camion = nuevoCamion;
+}
+
+public setMoto(nuevoMoto: Moto): void {
+    this.Moto = nuevoMoto;
+}
+
+public getAuto(): string {
     return this.Auto;
 }
-getCamion(): string {
+public getCamion(): string {
     return this.Camion;
 }
-getMoto(): string {
+public getMoto(): string {
     return this.Moto;
 }
 
 
-getDatos() {
+public getDatos() {
     return(
      `Marca: ${this.getMarca()}
       Modelo: ${this.getModelo()} 
       Patente: ${ this.getPatente()}
       Annio: ${this.getAnnio()}
-      Auto: ${this.getAuto()}
-      Camion: ${this.getCamion()}
-      Moto: ${this.getMoto()}`
+      Caracteristicas del Auto: ${this.getAuto()}
+      Caracteristicas del Camion: ${this.getCamion()}
+      Caracteristicas de la Moto: ${this.getMoto()}`
     )
     
 }

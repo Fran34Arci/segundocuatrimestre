@@ -7,11 +7,14 @@ var Camion = /** @class */ (function () {
         this.capCarga = capCarga;
     }
     //metodos: getters y setters
-    Camion.prototype.getCapcarga = function () {
+    Camion.prototype.getCapCarga = function () {
         return this.capCarga;
     };
-    Camion.prototype.setCapcarga = function (nuevoCapCarga) {
+    Camion.prototype.setCapCarga = function (nuevoCapCarga) {
         this.capCarga = nuevoCapCarga;
+    };
+    Camion.prototype.getDatosCamion = function () {
+        return ("N\u00BA Carga: ".concat(this.getCapCarga()));
     };
     return Camion;
 }());

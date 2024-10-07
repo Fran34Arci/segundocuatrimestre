@@ -17,11 +17,11 @@ const camion1 = new Camion(2010);
 //atributos vehiculo marca: string , modelo: string , patente:string, annio: string, Auto?:Auto, Camion?:Camion, Moto?:Moto 
 //rellenar con undefined el tipo de vehiculo que no va.
 
-const vehiculo1 = new Vehiculo("Renault", "Nº12","FLT453","1985", auto1, undefined, undefined);
+const vehiculo1 = new Vehiculo("Renault", "Nº12","FLT453","1985", auto1.getDatosAuto());
 
-const vehiculo2 = new Vehiculo("Escania", "CR56","GTJ657","1999", undefined,camion1,undefined);
+const vehiculo2 = new Vehiculo("Escania", "CR56","GTJ657","1999", camion1.getDatosCamion());
 
-const vehiculo3 = new Vehiculo("Sanela", "Bt1","PAC422","2001", undefined,undefined, moto1 );
+const vehiculo3 = new Vehiculo("Sanela", "Bt1","PAC422","2001",  moto1.getDatosMoto() );
 
 
 const registro1 = new RegistroAutomotor();

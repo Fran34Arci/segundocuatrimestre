@@ -4,7 +4,7 @@ export {Auto};
 class Auto {
     //atributos o variables internas
     
-    private numPuertas: number;
+    protected numPuertas: number;
 
        //constructor
     constructor(numPuertas: number) {
@@ -14,11 +14,19 @@ class Auto {
 
     //metodos: getters y setters
   
-    getnumpuertas(): number {
+
+
+    public getNumPuertas(): number {
         return this.numPuertas;
     }
-    setnumpuertas(nuevoNumPuertas:number): void {
+    public setNumPuertas(nuevoNumPuertas:number): void {
             this.numPuertas = nuevoNumPuertas;
+    }
+
+    public getDatosAuto() {
+        return(
+         `Nº Puertas: ${this.getNumPuertas()}`
+        )
     }
   
 }

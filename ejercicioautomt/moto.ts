@@ -3,8 +3,8 @@ export {Moto};
 class Moto {
     //atributos o variables internas
    
-    private rodado: number;
-    private cilindrada: number;
+    protected rodado: number;
+    protected cilindrada: number;
    
     //constructor
     constructor(cilindrada:number, rodado: number) {
@@ -15,20 +15,27 @@ class Moto {
     }
 
     //metodos: getters y setters
-    getRodado(): number{
+    public getRodado(): number{
         return this.rodado;
     }
-    setRodado(nuevoRodado: number ): void {
+    public setRodado(nuevoRodado: number ): void {
             this.rodado= nuevoRodado;
     }
          
-    getCilindrada(): number{
+    public getCilindrada(): number{
         return this.cilindrada;
     }
-    setCilindrada(nuevoCilindrada: number ): void {
+    public setCilindrada(nuevoCilindrada: number ): void {
             this.cilindrada= nuevoCilindrada;
     }
-
+    
+    public getDatosMoto() {
+        return(
+         `Nº Cilindrada: ${this.getCilindrada()}
+          Nº Rodado: ${this.getRodado()}
+         `
+        )
+    }
    
 
     }
