@@ -14,8 +14,6 @@ class Auto {
 
     //metodos: getters y setters
   
-
-
     public getNumPuertas(): number {
         return this.numPuertas;
     }

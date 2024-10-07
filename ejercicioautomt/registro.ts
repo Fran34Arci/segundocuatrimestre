@@ -64,9 +64,6 @@ import {Vehiculo} from './vehiculo';
                 this.vehiculos = vehiculos;
               }
           
-
-
-
               
           }
       

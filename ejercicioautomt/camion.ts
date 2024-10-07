@@ -7,9 +7,8 @@ class Camion {
     
     //constructor
     constructor(capCarga:number) {
-        
-        this.capCarga = capCarga;
-        
+                this.capCarga = capCarga;
+       
     }
 
     //metodos: getters y setters
