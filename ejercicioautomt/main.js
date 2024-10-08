@@ -13,9 +13,9 @@ var moto1 = new moto_1.Moto(12, 4);
 var camion1 = new camion_1.Camion(2010);
 //atributos vehiculo marca: string , modelo: string , patente:string, annio: string, Auto?:Auto, Camion?:Camion, Moto?:Moto 
 //rellenar con undefined el tipo de vehiculo que no va.
-var vehiculo1 = new vehiculo_1.Vehiculo("Renault", "Nº12", "FLT453", "1985", auto1, undefined, undefined);
-var vehiculo2 = new vehiculo_1.Vehiculo("Escania", "CR56", "GTJ657", "1999", undefined, camion1, undefined);
-var vehiculo3 = new vehiculo_1.Vehiculo("Sanela", "Bt1", "PAC422", "2001", undefined, undefined, moto1);
+var vehiculo1 = new vehiculo_1.Vehiculo("Renault", "Nº12", "FLT453", "1985", auto1.getDatosAuto());
+var vehiculo2 = new vehiculo_1.Vehiculo("Escania", "CR56", "GTJ657", "1999", camion1.getDatosCamion());
+var vehiculo3 = new vehiculo_1.Vehiculo("Sanela", "Bt1", "PAC422", "2001", moto1.getDatosMoto());
 var registro1 = new registro_1.RegistroAutomotor();
 registro1.agregarVehiculo(vehiculo1);
 registro1.agregarVehiculo(vehiculo2);
