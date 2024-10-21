@@ -1,19 +1,18 @@
 export {Auto};
+import { Vehiculo } from "./vehiculo";
 
-
-class Auto {
-    //atributos o variables internas
-    
-    protected numPuertas: number;
-
-       //constructor
-    constructor(numPuertas: number) {
+    class Auto extends Vehiculo {
+        //atributos o variables internas
       
-        this.numPuertas = numPuertas;
-    }
+        protected numPuertas: number;
+            //constructor
+            constructor(marca, modelo, patente, annio,tipo, numPuertas: number) {
+            super(marca, modelo, patente,annio, tipo);
+             this.numPuertas = numPuertas;
+                
+       }
 
-    //metodos: getters y setters
-  
+    //metodos: getters y setters 
     public getNumPuertas(): number {
         return this.numPuertas;
     }
@@ -23,8 +22,7 @@ class Auto {
 
     public getDatosAuto() {
         return(
-         `Nº Puertas: ${this.getNumPuertas()}`
+         `Nº Puertas: ${this.numPuertas}`
         )
     }
-  
 }

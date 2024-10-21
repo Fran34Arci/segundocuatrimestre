@@ -1,13 +1,16 @@
 export {Moto};
+import { Vehiculo } from "./vehiculo";
 
-class Moto {
+class Moto extends Vehiculo {
     //atributos o variables internas
    
     protected rodado: number;
     protected cilindrada: number;
    
+    
     //constructor
-    constructor(cilindrada:number, rodado: number) {
+    constructor(marca, modelo, patente, annio, tipo, cilindrada:number, rodado: number) {
+        super(marca, modelo, patente, annio, tipo);
         
         this.rodado= rodado;
         this.cilindrada= cilindrada;
