@@ -9,10 +9,7 @@ import {Camion} from './camion';
             //private vehiculo: Vehiculo;
 
               private vehiculos: Vehiculo[] = [];
-              private autos: Auto[] = [];
-              private motos: Moto[] = [];
-              private camiones: Camion[] = [];
-
+             
               private marcaCamb: string;
               private modeloCamb: string;
               private patenteCamb:string; 
@@ -65,8 +62,7 @@ import {Camion} from './camion';
                       
                       const index = this.vehiculos.indexOf(vehiculoEliminar);
                       if (index !== -1) {
-                      this.camiones.splice(index, 1);
-                        this.vehiculos.splice(index, 1);
+                       this.vehiculos.splice(index, 1);
                         console.log(`Vehículo tipo Camion eliminado: ${vehiculoEliminar.getDatos()} ${vehiculoEliminar.getDatosCamion()} `);
                       } 
                       } 
