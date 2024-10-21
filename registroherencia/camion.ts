@@ -1,15 +1,16 @@
 export {Camion};
+import { Vehiculo } from "./vehiculo";
 
-class Camion {
+class Camion extends Vehiculo {
     //atributos o variables internas
   
     protected capCarga: number;
-    
-    //constructor
-    constructor(capCarga:number) {
-                this.capCarga = capCarga;
-       
-    }
+       //constructor
+        constructor(marca, modelo, patente, annio, tipo,capCarga:number) {
+        super(marca, modelo, patente, annio, tipo);
+            
+        this.capCarga = capCarga;
+   }
 
     //metodos: getters y setters
     public getCapCarga(): number {
@@ -24,4 +25,7 @@ class Camion {
          `Nº Carga: ${this.getCapCarga()}`
         )
     }
+
 }
+
+
