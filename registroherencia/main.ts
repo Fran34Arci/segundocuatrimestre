@@ -3,8 +3,6 @@ import {Auto} from './auto';
 import {Camion} from './camion';
 import {Moto} from './moto';
 import {Vehiculo} from './vehiculo';
-import { SoporteMoto } from './soportemoto';
-import { SoporteCamion } from './sosportecamion';
 
 
 //atributos de autos 
