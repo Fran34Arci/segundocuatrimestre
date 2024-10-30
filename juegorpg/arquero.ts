@@ -44,8 +44,8 @@ import {Personaje} from "./personaje";
 //ataques de Arquero
 public ataqueFlechasPlata() {
     if(this.precision >=50 && this.flechasPlata ==true){
-        this.precision- 50;
-        this.puntosGolpe +10;
+        this.precision = this.precision- 50;
+        this.puntosGolpe = this.puntosGolpe + 10;
         console.log("Ataque con Flecha de Plata");
 }
 else{console.log(`tu nivel de Precision es bajo no puedes ejecutar el ataque`);
@@ -55,8 +55,8 @@ else{console.log(`tu nivel de Precision es bajo no puedes ejecutar el ataque`);
 
 public ataqueFlechasOro() {
         if (this.precision >=75 && this.flechasOro==true){
-            this.precision- 50;
-            this.puntosGolpe +15;
+            this.precision = this.precision- 75;
+            this.puntosGolpe = this.puntosGolpe +15;
             console.log("Ataque con Flecha de Oro");
         }
 

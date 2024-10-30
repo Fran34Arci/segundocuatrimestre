@@ -2,6 +2,7 @@ import {Personaje} from "./personaje";
 import {Hechicero} from './hechicero';
 import {Guerrero} from './guerrero';
 import {Arquero} from './arquero';
+import { ArqueroEvolucion } from "./arqueroEvo";
 
 //nombre, nivel, puntosDeVida, puntosGolpe,cantidadVidas, fuerza,espadaGrande, hacha) {
 const guerrero1 = new Guerrero("Conan",150,0,3,100,false,false);
@@ -46,3 +47,21 @@ for(let x = 0; x <=10; x++){
     hechicero1.atacar();
     console.log(arquero1.getDatos() + arquero1.getDatosArquero());
 }
+
+console.log(arquero1.getDatos() + arquero1.getDatosArquero());
+//Crea Arquero EVolucionado Compone con arquero1
+const arqueroEvo1 = new ArqueroEvolucion(arquero1);
+
+console.log(arqueroEvo1);
+
+console.log(arquero1.getDatos() + arquero1.getDatosArquero() + arqueroEvo1.getDatosArqueroEvolucion());
+
+for(let x = 0; x <=10; x++){
+    arqueroEvo1.esquivarEvo(arquero1);
+    arqueroEvo1.defenzaEvo(arquero1);
+    arqueroEvo1.ataqueEvo(arquero1);
+    arqueroEvo1.ataqueFlechasRubi(arquero1);
+    arqueroEvo1.ataqueFlechasDiamante(arquero1);
+    console.log(arquero1.getDatos() + arquero1.getDatosArquero() + arqueroEvo1.getDatosArqueroEvolucion());
+}
+console.log(arquero1.getDatos() + arquero1.getDatosArquero() + arqueroEvo1.getDatosArqueroEvolucion());

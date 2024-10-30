@@ -12,7 +12,7 @@ var Personaje = /** @class */ (function () {
     }
     Personaje.prototype.chequearNivel = function () {
         if (this.puntosGolpe >= 50) {
-            this.puntosGolpe = this.puntosGolpe - 75;
+            this.puntosGolpe = this.puntosGolpe - 50;
             this.nivel++;
         }
     };

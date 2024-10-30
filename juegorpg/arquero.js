@@ -52,8 +52,8 @@ var Arquero = /** @class */ (function (_super) {
     //ataques de Arquero
     Arquero.prototype.ataqueFlechasPlata = function () {
         if (this.precision >= 50 && this.flechasPlata == true) {
-            this.precision - 50;
-            this.puntosGolpe + 10;
+            this.precision = this.precision - 50;
+            this.puntosGolpe = this.puntosGolpe + 10;
             console.log("Ataque con Flecha de Plata");
         }
         else {
@@ -62,8 +62,8 @@ var Arquero = /** @class */ (function (_super) {
     };
     Arquero.prototype.ataqueFlechasOro = function () {
         if (this.precision >= 75 && this.flechasOro == true) {
-            this.precision - 50;
-            this.puntosGolpe + 15;
+            this.precision = this.precision - 75;
+            this.puntosGolpe = this.puntosGolpe + 15;
             console.log("Ataque con Flecha de Oro");
         }
         else {

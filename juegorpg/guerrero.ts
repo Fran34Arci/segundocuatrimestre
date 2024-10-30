@@ -19,21 +19,21 @@ import {Personaje} from "./personaje";
         public atacar () {
             if(this.nivel == 1){ 
                 console.log("Ataque normal de guerrero");
-                this.puntosGolpe + 10;
-                this.fuerza + 10;
-               this.chequearNivel();
+                this.puntosGolpe = this.puntosGolpe + 10;
+                this.fuerza = this.fuerza + 10;
+                this.chequearNivel();
              }
         else if(this.nivel == 2){
                 console.log(`Ataque ${this.nivel} de guerrero`);
-                this.puntosGolpe + 15;
-                this.fuerza + 15;
+                this.puntosGolpe =this.puntosGolpe + 15;
+                this.fuerza = this.fuerza + 15;
                 this.espadaGrande = true;
                 this.chequearNivel();
              }
         else if(this.nivel == 3){
             console.log(`Ataque ${this.nivel} de guerrero`);
-            this.puntosGolpe + 20;
-            this.fuerza + 20;
+            this.puntosGolpe = this.puntosGolpe + 20;
+            this.fuerza = this.fuerza + 20;
             this.hacha = true;
             this.chequearNivel();
          }
@@ -42,8 +42,8 @@ import {Personaje} from "./personaje";
 //ataques de Guerrero
         public ataqueEspadaGrande() {
             if(this.fuerza >=50 && this.espadaGrande ==true){
-                this.fuerza- 50;
-                this.puntosGolpe +10;
+                this.fuerza = this.fuerza- 50;
+                this.puntosGolpe = this.puntosGolpe +10;
                 console.log("Ataque con Espada Grande");
         }
     else{console.log(`tu nivel de  Fuerza es bajo no puedes ejecutar el ataque`);
@@ -53,8 +53,8 @@ import {Personaje} from "./personaje";
     
     public ataqueHacha() {
                 if (this.fuerza >=75 && this.hacha==true){
-                    this.fuerza- 50;
-                    this.puntosGolpe +15;
+                    this.fuerza = this.fuerza- 50;
+                    this.puntosGolpe = this.puntosGolpe +15;
                     console.log("Ataque con Hacha");
                 }
 

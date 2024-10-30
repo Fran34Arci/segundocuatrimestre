@@ -17,27 +17,26 @@ import {Personaje} from "./personaje";
        }
 
 
-    
-     public atacar () {
+       public atacar () {
     if(this.nivel == 1){ 
-        console.log("Ataque normal de hechicero");
-        this.puntosGolpe + 10;
-        this.mana + 10;
+       console.log("Ataque normal de hechicero");
+       this.puntosGolpe = this.puntosGolpe + 10;
+       this.mana = this.mana + 10;
        this.chequearNivel();
      }
 else if(this.nivel == 2){
         console.log(`Ataque ${this.nivel} de hechicero`);
-        this.puntosGolpe + 15;
-        this.mana + 15;
-        this.manaFuego + 15;
+        this.puntosGolpe = this.puntosGolpe + 15;
+        this.mana = this.mana + 15;
+        this.manaFuego =this.manaFuego + 15;
         this.chequearNivel();
      }
 else if(this.nivel == 3){
     console.log(`Ataque ${this.nivel} de hechicero`);
-    this.puntosGolpe + 20;
-    this.mana + 20;
-    this.manaFuego + 20;
-    this.manaTrueno + 25;
+    this.puntosGolpe = this.puntosGolpe + 20;
+    this.mana = this.mana + 20;
+    this.manaFuego = this.manaFuego + 20;
+    this.manaTrueno = this.manaTrueno + 25;
     this.chequearNivel();
  }
 }
@@ -46,9 +45,9 @@ else if(this.nivel == 3){
 
        public ataqueFuego() {
         if(this.manaFuego >=50 && this.mana >=15){
-            this.mana -15;
-            this.manaFuego - 50;
-            this.puntosGolpe +10;
+            this.mana = this.mana -15;
+            this.manaFuego = this.manaFuego -50;
+            this.puntosGolpe = this.puntosGolpe +10;
 
         console.log("Ataque bola de fuego");
     }
@@ -57,9 +56,9 @@ else{console.log(`tu nivel de mana y/o mana de Fuego es bajo no puedes ejecutar 
 
         public ataqueTrueno() {
             if(this.manaFuego >=75 && this.mana >=20){
-                this.mana -20;
-                this.manaTrueno- 75;
-                this.puntosGolpe +15;
+                this.mana = this.mana -20;
+                this.manaTrueno = this.manaTrueno- 75;
+                this.puntosGolpe = this.puntosGolpe +15;
                 console.log("Ataque de trueno");
             }
         else{console.log(`tu nivel de mana y/o mana de Trueno es bajo no puedes ejecutar el ataque`);}

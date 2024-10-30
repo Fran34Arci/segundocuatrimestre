@@ -30,21 +30,21 @@ var Guerrero = /** @class */ (function (_super) {
     Guerrero.prototype.atacar = function () {
         if (this.nivel == 1) {
             console.log("Ataque normal de guerrero");
-            this.puntosGolpe + 10;
-            this.fuerza + 10;
+            this.puntosGolpe = this.puntosGolpe + 10;
+            this.fuerza = this.fuerza + 10;
             this.chequearNivel();
         }
         else if (this.nivel == 2) {
             console.log("Ataque ".concat(this.nivel, " de guerrero"));
-            this.puntosGolpe + 15;
-            this.fuerza + 15;
+            this.puntosGolpe = this.puntosGolpe + 15;
+            this.fuerza = this.fuerza + 15;
             this.espadaGrande = true;
             this.chequearNivel();
         }
         else if (this.nivel == 3) {
             console.log("Ataque ".concat(this.nivel, " de guerrero"));
-            this.puntosGolpe + 20;
-            this.fuerza + 20;
+            this.puntosGolpe = this.puntosGolpe + 20;
+            this.fuerza = this.fuerza + 20;
             this.hacha = true;
             this.chequearNivel();
         }
@@ -52,8 +52,8 @@ var Guerrero = /** @class */ (function (_super) {
     //ataques de Guerrero
     Guerrero.prototype.ataqueEspadaGrande = function () {
         if (this.fuerza >= 50 && this.espadaGrande == true) {
-            this.fuerza - 50;
-            this.puntosGolpe + 10;
+            this.fuerza = this.fuerza - 50;
+            this.puntosGolpe = this.puntosGolpe + 10;
             console.log("Ataque con Espada Grande");
         }
         else {
@@ -62,8 +62,8 @@ var Guerrero = /** @class */ (function (_super) {
     };
     Guerrero.prototype.ataqueHacha = function () {
         if (this.fuerza >= 75 && this.hacha == true) {
-            this.fuerza - 50;
-            this.puntosGolpe + 15;
+            this.fuerza = this.fuerza - 50;
+            this.puntosGolpe = this.puntosGolpe + 15;
             console.log("Ataque con Hacha");
         }
         else {
