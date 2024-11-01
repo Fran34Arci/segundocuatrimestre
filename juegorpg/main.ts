@@ -28,7 +28,7 @@ for(let x = 0; x <=25; x++){
     arquero1.ataqueFlechasPlata();
     console.log(arquero1.getDatos() + arquero1.getDatosArquero());
 }
-/*
+
 //Guerrero
 for(let x = 0; x <=10; x++){
     guerrero1 .esquivar();
@@ -48,7 +48,7 @@ for(let x = 0; x <=10; x++){
     hechicero1.atacar();
     console.log(arquero1.getDatos() + arquero1.getDatosArquero());
 }
-*/
+
 console.log(arquero1.getDatos() + arquero1.getDatosArquero());
 //Crea Arquero EVolucionado Compone con arquero1
  const arqueroEvo1 = new ArqueroEvolucion(arquero1);
