@@ -22,10 +22,9 @@ for (var x = 0; x <= 25; x++) {
     arquero1.ataqueFlechasPlata();
     console.log(arquero1.getDatos() + arquero1.getDatosArquero());
 }
-/*
 //Guerrero
-for(let x = 0; x <=10; x++){
-    guerrero1 .esquivar();
+for (var x = 0; x <= 10; x++) {
+    guerrero1.esquivar();
     guerrero1.defender();
     guerrero1.atacar();
     guerrero1.ataqueEspadaGrande();
@@ -33,7 +32,7 @@ for(let x = 0; x <=10; x++){
     console.log(arquero1.getDatos() + arquero1.getDatosArquero());
 }
 //Hechicero
-for(let x = 0; x <=10; x++){
+for (var x = 0; x <= 10; x++) {
     hechicero1.esquivar();
     hechicero1.defender();
     hechicero1.atacar();
@@ -42,7 +41,6 @@ for(let x = 0; x <=10; x++){
     hechicero1.atacar();
     console.log(arquero1.getDatos() + arquero1.getDatosArquero());
 }
-*/
 console.log(arquero1.getDatos() + arquero1.getDatosArquero());
 //Crea Arquero EVolucionado Compone con arquero1
 var arqueroEvo1 = new arqueroEvo_1.ArqueroEvolucion(arquero1);
