@@ -16,8 +16,6 @@ var Personaje = /** @class */ (function () {
             this.nivel++;
         }
     };
-    Personaje.prototype.atacar = function () {
-    };
     Personaje.prototype.defender = function () {
         console.log("Defenza normal");
         this.puntosDeVida = this.puntosDeVida - 1;

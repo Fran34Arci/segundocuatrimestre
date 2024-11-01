@@ -14,7 +14,7 @@ console.log(guerrero1.getDatos() + guerrero1.getDatosGuerrero());
 console.log(hechicero1.getDatos() + hechicero1.getDatosHechicero());
 console.log(arquero1.getDatos() + arquero1.getDatosArquero());
 //Arquero
-for (var x = 0; x <= 10; x++) {
+for (var x = 0; x <= 25; x++) {
     arquero1.esquivar();
     arquero1.defender();
     arquero1.atacar();
@@ -22,9 +22,10 @@ for (var x = 0; x <= 10; x++) {
     arquero1.ataqueFlechasPlata();
     console.log(arquero1.getDatos() + arquero1.getDatosArquero());
 }
+/*
 //Guerrero
-for (var x = 0; x <= 10; x++) {
-    guerrero1.esquivar();
+for(let x = 0; x <=10; x++){
+    guerrero1 .esquivar();
     guerrero1.defender();
     guerrero1.atacar();
     guerrero1.ataqueEspadaGrande();
@@ -32,7 +33,7 @@ for (var x = 0; x <= 10; x++) {
     console.log(arquero1.getDatos() + arquero1.getDatosArquero());
 }
 //Hechicero
-for (var x = 0; x <= 10; x++) {
+for(let x = 0; x <=10; x++){
     hechicero1.esquivar();
     hechicero1.defender();
     hechicero1.atacar();
@@ -41,17 +42,19 @@ for (var x = 0; x <= 10; x++) {
     hechicero1.atacar();
     console.log(arquero1.getDatos() + arquero1.getDatosArquero());
 }
+*/
 console.log(arquero1.getDatos() + arquero1.getDatosArquero());
 //Crea Arquero EVolucionado Compone con arquero1
 var arqueroEvo1 = new arqueroEvo_1.ArqueroEvolucion(arquero1);
 console.log(arqueroEvo1);
 console.log(arquero1.getDatos() + arquero1.getDatosArquero() + arqueroEvo1.getDatosArqueroEvolucion());
 for (var x = 0; x <= 10; x++) {
-    arqueroEvo1.esquivarEvo(arquero1);
-    arqueroEvo1.defenzaEvo(arquero1);
-    arqueroEvo1.ataqueEvo(arquero1);
-    arqueroEvo1.ataqueFlechasRubi(arquero1);
-    arqueroEvo1.ataqueFlechasDiamante(arquero1);
+    arqueroEvo1.esquivarEvo();
+    arqueroEvo1.defenzaEvo();
+    arqueroEvo1.atacar();
+    arqueroEvo1.ataqueFlechasOro();
+    arqueroEvo1.ataqueFlechasRubi();
+    arqueroEvo1.ataqueFlechasDiamante();
     console.log(arquero1.getDatos() + arquero1.getDatosArquero() + arqueroEvo1.getDatosArqueroEvolucion());
 }
 console.log(arquero1.getDatos() + arquero1.getDatosArquero() + arqueroEvo1.getDatosArqueroEvolucion());

@@ -5,7 +5,7 @@ import {Arquero} from './arquero';
 
 
 
-class Personaje  {
+abstract class Personaje  {
     protected nombre: string;
     protected nivel = 1;
     protected puntosDeVida: number;
@@ -27,8 +27,8 @@ public chequearNivel(){
        this.nivel ++} 
      }
 
-public atacar () {
-}
+
+abstract atacar():void; 
 
 public defender(){
     console.log("Defenza normal");
