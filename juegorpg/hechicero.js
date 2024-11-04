@@ -20,8 +20,8 @@ var personaje_1 = require("./personaje");
 var Hechicero = /** @class */ (function (_super) {
     __extends(Hechicero, _super);
     //constructor
-    function Hechicero(nombre, puntosDeVida, puntosGolpe, cantidadVidas, mana, manaFuego, manaTrueno) {
-        var _this = _super.call(this, nombre, puntosDeVida, puntosGolpe, cantidadVidas) || this;
+    function Hechicero(nombre, nivel, puntosDeVida, puntosGolpe, cantidadVidas, mana, manaFuego, manaTrueno) {
+        var _this = _super.call(this, nombre, nivel, puntosDeVida, puntosGolpe, cantidadVidas) || this;
         _this.mana = mana;
         _this.manaFuego = manaFuego;
         _this.manaTrueno = manaTrueno;
@@ -37,16 +37,16 @@ var Hechicero = /** @class */ (function (_super) {
         else if (this.nivel == 2) {
             console.log("Ataque ".concat(this.nivel, " de hechicero"));
             this.puntosGolpe = this.puntosGolpe + 15;
-            this.mana = this.mana + 15;
-            this.manaFuego = this.manaFuego + 15;
+            this.mana = this.mana + 150;
+            this.manaFuego = this.manaFuego + 150;
             this.chequearNivel();
         }
         else if (this.nivel == 3) {
             console.log("Ataque ".concat(this.nivel, " de hechicero"));
             this.puntosGolpe = this.puntosGolpe + 20;
-            this.mana = this.mana + 20;
-            this.manaFuego = this.manaFuego + 20;
-            this.manaTrueno = this.manaTrueno + 25;
+            this.mana = this.mana + 200;
+            this.manaFuego = this.manaFuego + 200;
+            this.manaTrueno = this.manaTrueno + 250;
             this.chequearNivel();
         }
     };
@@ -63,7 +63,7 @@ var Hechicero = /** @class */ (function (_super) {
         }
     };
     Hechicero.prototype.ataqueTrueno = function () {
-        if (this.manaFuego >= 75 && this.mana >= 20) {
+        if (this.manaTrueno >= 75 && this.mana >= 20) {
             this.mana = this.mana - 20;
             this.manaTrueno = this.manaTrueno - 75;
             this.puntosGolpe = this.puntosGolpe + 15;

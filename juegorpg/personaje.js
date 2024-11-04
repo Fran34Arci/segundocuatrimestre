@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Personaje = void 0;
 var Personaje = /** @class */ (function () {
     //constructor
-    function Personaje(nombre, puntosDeVida, puntosGolpe, cantidadVidas) {
-        this.nivel = 1;
+    function Personaje(nombre, nivel, puntosDeVida, puntosGolpe, cantidadVidas) {
+        this.nivel = nivel;
         this.nombre = nombre;
         this.puntosDeVida = puntosDeVida;
         this.puntosGolpe = puntosGolpe;

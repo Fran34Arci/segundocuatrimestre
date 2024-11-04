@@ -20,8 +20,8 @@ var personaje_1 = require("./personaje");
 var Guerrero = /** @class */ (function (_super) {
     __extends(Guerrero, _super);
     //constructor
-    function Guerrero(nombre, puntosDeVida, puntosGolpe, cantidadVidas, fuerza, espadaGrande, hacha) {
-        var _this = _super.call(this, nombre, puntosDeVida, puntosGolpe, cantidadVidas) || this;
+    function Guerrero(nombre, nivel, puntosDeVida, puntosGolpe, cantidadVidas, fuerza, espadaGrande, hacha) {
+        var _this = _super.call(this, nombre, nivel, puntosDeVida, puntosGolpe, cantidadVidas) || this;
         _this.fuerza = fuerza;
         _this.espadaGrande = espadaGrande;
         _this.hacha = hacha;

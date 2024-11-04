@@ -1,26 +1,24 @@
-import {Personaje} from "./personaje";
-import {Hechicero} from './hechicero';
-import {Guerrero} from './guerrero';
-import {Arquero} from './arquero';
+import { Personaje } from "./personaje";
+import { Hechicero } from './hechicero';
+import { Guerrero } from './guerrero';
+import { Arquero } from './arquero';
 import { ArqueroEvolucion } from "./arqueroEvo";
 
 //nombre, nivel, puntosDeVida, puntosGolpe,cantidadVidas, fuerza,espadaGrande, hacha) {
-const guerrero1 = new Guerrero("Conan",150,0,3,100,false,false);
+const guerrero1 = new Guerrero("Conan",1, 150, 0, 3, 100, false, false);
 
 //nombre, nivel, puntosDeVida, puntosGolpe,cantidadVidas, precision, flechasPlata, flechasOro)
-const arquero1 = new Arquero("Legolas",120,0,3,100,false,false);
+const arquero1 = new Arquero("Legolas",1, 120, 0, 3, 100, false, false);
 
 //nombre, nivel, puntosDeVida, puntosGolpe,cantidadVidas, mana, manaFuego,manaTrueno
-const hechicero1 = new Hechicero("Merlin",100,0,3,100,0,0);
-
+const hechicero1 = new Hechicero("Merlin",1, 100, 0, 3, 100, 0, 0);
 
 console.log(guerrero1.getDatos() + guerrero1.getDatosGuerrero());
 console.log(hechicero1.getDatos() + hechicero1.getDatosHechicero());
 console.log(arquero1.getDatos() + arquero1.getDatosArquero());
 
-
 //Arquero
-for(let x = 0; x <=25; x++){
+for (let x = 0; x <= 25; x++) {
     arquero1.esquivar();
     arquero1.defender();
     arquero1.atacar();
@@ -28,45 +26,48 @@ for(let x = 0; x <=25; x++){
     arquero1.ataqueFlechasPlata();
     console.log(arquero1.getDatos() + arquero1.getDatosArquero());
 }
-
 //Guerrero
-for(let x = 0; x <=10; x++){
-    guerrero1 .esquivar();
+for (let x = 0; x <= 10; x++) {
+    guerrero1.esquivar();
     guerrero1.defender();
     guerrero1.atacar();
     guerrero1.ataqueEspadaGrande();
     guerrero1.ataqueHacha();
-    console.log(arquero1.getDatos() + arquero1.getDatosArquero());
+    console.log(guerrero1.getDatos() + guerrero1.getDatosGuerrero());
 }
 //Hechicero
-for(let x = 0; x <=10; x++){
+for (let x = 0; x <= 10; x++) {
     hechicero1.esquivar();
     hechicero1.defender();
     hechicero1.atacar();
     hechicero1.ataqueFuego();
     hechicero1.ataqueTrueno();
     hechicero1.atacar();
-    console.log(arquero1.getDatos() + arquero1.getDatosArquero());
+    console.log(hechicero1.getDatos() + hechicero1.getDatosHechicero());
 }
-
+//datos arquero que va a evolucionar
 console.log(arquero1.getDatos() + arquero1.getDatosArquero());
-//Crea Arquero EVolucionado Compone con arquero1
- const arqueroEvo1 = new ArqueroEvolucion(arquero1);
-
- 
-
+//crea al arquero Evolucion a partir del arquero
+const arqueroEvo1 = ArqueroEvolucion.evolucionar(arquero1);
 console.log(arqueroEvo1);
+console.log(arqueroEvo1.getDatosArqueroEvolucion());
 
-console.log(arquero1.getDatos() + arquero1.getDatosArquero() + arqueroEvo1.getDatosArqueroEvolucion());
-
-for(let x = 0; x <=10; x++){
+for (let x = 0; x <= 10; x++) {
+    //funciones personaje
+    arqueroEvo1.esquivar();
+    arqueroEvo1.defender();
+    //funciones arquero
+    arqueroEvo1.atacar();
+    arqueroEvo1.ataqueFlechasPlata();
+    arqueroEvo1.ataqueFlechasOro();
+    //funciones arqueroEvolucion
     arqueroEvo1.esquivarEvo();
     arqueroEvo1.defenzaEvo();
     arqueroEvo1.atacar();
-    arqueroEvo1.ataqueFlechasOro();
     arqueroEvo1.ataqueFlechasRubi();
     arqueroEvo1.ataqueFlechasDiamante();
-    console.log(arquero1.getDatos() + arquero1.getDatosArquero() + arqueroEvo1.getDatosArqueroEvolucion());
+    arqueroEvo1.ataqueLlamadoLobo();
+    console.log(arqueroEvo1.getDatosArqueroEvolucion());
 }
-
-console.log(arquero1.getDatos() + arquero1.getDatosArquero() + arqueroEvo1.getDatosArqueroEvolucion());
+    console.log(arqueroEvo1);
+    console.log(arqueroEvo1.getDatosArqueroEvolucion());
