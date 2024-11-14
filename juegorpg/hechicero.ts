@@ -7,7 +7,7 @@ class Hechicero extends Personaje {
     private manaFuego: number;
     private manaTrueno: number;
     //constructor
-    constructor(nombre,nivel, puntosDeVida, puntosGolpe, cantidadVidas, mana, manaFuego, manaTrueno) {
+    constructor(nombre:string,nivel:number, puntosDeVida:number, puntosGolpe:number, cantidadVidas:number, mana:number, manaFuego:number, manaTrueno:number) {
         super(nombre,nivel, puntosDeVida, puntosGolpe, cantidadVidas);
         this.mana = mana;
         this.manaFuego = manaFuego;
@@ -28,7 +28,7 @@ class Hechicero extends Personaje {
             this.manaFuego = this.manaFuego + 150;
             this.chequearNivel();
         }
-        else if (this.nivel == 3) {
+        else if (this.nivel >= 3) {
             console.log(`Ataque ${this.nivel} de hechicero`);
             this.puntosGolpe = this.puntosGolpe + 20;
             this.mana = this.mana + 200;
@@ -37,6 +37,7 @@ class Hechicero extends Personaje {
             this.chequearNivel();
         }
     }
+
     //ataques de Hechicero
     public ataqueFuego() {
         if (this.manaFuego >= 50 && this.mana >= 15) {
@@ -58,6 +59,7 @@ class Hechicero extends Personaje {
         }
         else { console.log(`tu nivel de mana y/o mana de Trueno es bajo no puedes ejecutar el ataque`); }
     }
+
     //metodos: getters y setters 
     public getMana(): number {
         return this.mana;
@@ -77,7 +79,7 @@ class Hechicero extends Personaje {
     public setManaTrueno(nuevomanaTrueno: number): void {
         this.manaTrueno = nuevomanaTrueno;
     }
-    public getDatosHechicero() {
+    public getDatosHechicero(): string {
         return (
             `Nivel de Mana: ${this.getMana()}
         Nivel de Mana Fuego: ${this.getManaFuego()}

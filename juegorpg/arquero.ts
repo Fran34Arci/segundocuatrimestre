@@ -1,19 +1,32 @@
 export { Arquero };
 import { Personaje } from "./personaje";
+import { ArqueroEvolucion } from "./arqueroEvo";
 
 class Arquero extends Personaje {
-    //atributos o variables internas
-    private precision: number;
-    private flechasPlata: boolean;
-    private flechasOro: boolean;
-    //constructor
-    constructor(nombre,nivel, puntosDeVida, puntosGolpe, cantidadVidas, precision, flechasPlata, flechasOro) {
-        super(nombre,nivel, puntosDeVida, puntosGolpe, cantidadVidas);
+    protected nombre: string;
+    protected nivel: number;
+    protected puntosDeVida: number;
+    protected puntosGolpe: number;
+    protected cantidadVidas: number;
+    protected precision: number;
+    protected flechasPlata: boolean;
+    protected flechasOro: boolean;
+    protected evolucion: ArqueroEvolucion;
+
+    constructor(nombre: string, nivel: number, puntosDeVida: number, puntosGolpe: number, cantidadVidas: number, precision: number, flechasPlata: boolean, flechasOro: boolean) {
+        super(nombre, nivel, puntosDeVida, puntosGolpe, cantidadVidas);
+        this.nombre = nombre;
+        this.nivel = nivel;
+        this.puntosDeVida = puntosDeVida;
+        this.puntosGolpe = puntosGolpe;
+        this.cantidadVidas = cantidadVidas;
         this.precision = precision;
         this.flechasPlata = flechasPlata;
         this.flechasOro = flechasOro;
+        this.evolucion = new ArqueroEvolucion(false, false, false, this);
     }
 
+    //ataques de Arquero
     public atacar() {
         if (this.nivel == 1) {
             console.log("Ataque normal de Arquero");
@@ -45,7 +58,7 @@ class Arquero extends Personaje {
             console.log("Ataque con Flecha de Plata");
         }
         else {
-            console.log(`tu nivel de Precision es bajo no puedes ejecutar el ataque`);
+            console.log(`tu nivel de Precision es bajo no puedes ejecutar el ataque Flecha de Plata`);
         }
     }
 
@@ -56,8 +69,9 @@ class Arquero extends Personaje {
             console.log("Ataque con Flecha de Oro");
         }
 
-        else { console.log(`tu nivel de Precision es bajo no puedes ejecutar el ataque`); }
+        else { console.log(`tu nivel de Precision es bajo no puedes ejecutar el ataque Flecha de Oro`); }
     }
+
     //metodos: getters y setters 
     public getPrecision(): number {
         return this.precision;
@@ -78,11 +92,37 @@ class Arquero extends Personaje {
         this.flechasOro = nuevoflechasOro;
     }
 
-    public getDatosArquero() {
+    public getEvolucion(): ArqueroEvolucion {
+        return this.evolucion;
+    }
+
+    public getDatosArquero(): string {
         return (
             `Nivel de Presicion : ${this.getPrecision()}
         Flechas de Plata Desbloqeada: ${this.getFlechasPlata()}
         Flechas Doradas Desbloqeada: ${this.getFlechasOro()}
-        `)
+    `)
     }
+
+    //Funciones arqueroevolucion
+    public getDatosArqueroEvolucion(): string {
+        return this.evolucion.getDatosArqueroEvolucion();
+    }
+
+    public atacarEvolucionado() {
+        this.evolucion.atacarevo();
+    }
+
+    public ataqueFlechasDiamante() {
+        this.evolucion.ataqueFlechasDiamante();
+    }
+
+    public ataqueFlechasRubi() {
+        this.evolucion.ataqueFlechasRubi();
+    }
+
+    public ataqueLlamadoLobo() {
+        this.evolucion.ataqueLlamadoLobo();
+    }
+
 }

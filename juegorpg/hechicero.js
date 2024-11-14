@@ -41,7 +41,7 @@ var Hechicero = /** @class */ (function (_super) {
             this.manaFuego = this.manaFuego + 150;
             this.chequearNivel();
         }
-        else if (this.nivel == 3) {
+        else if (this.nivel >= 3) {
             console.log("Ataque ".concat(this.nivel, " de hechicero"));
             this.puntosGolpe = this.puntosGolpe + 20;
             this.mana = this.mana + 200;

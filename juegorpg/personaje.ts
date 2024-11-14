@@ -10,7 +10,7 @@ abstract class Personaje {
     protected puntosGolpe: number;
     protected cantidadVidas: number;
     //constructor
-    constructor(nombre, nivel, puntosDeVida, puntosGolpe, cantidadVidas) {
+    constructor(nombre:string, nivel:number, puntosDeVida:number, puntosGolpe:number, cantidadVidas:number) {
         this.nivel= nivel;
         this.nombre = nombre;
         this.puntosDeVida = puntosDeVida;
@@ -65,7 +65,7 @@ abstract class Personaje {
     public setCantidadVidas(nuevocantidadVidas: number): void {
         this.cantidadVidas = nuevocantidadVidas;
     }
-    public getDatos() {
+    public getDatos(): string {
         return (
             `Nombre personaje: ${this.getNombre()}
         Nivel del Personaje: ${this.getNivel()}

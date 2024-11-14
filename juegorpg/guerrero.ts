@@ -7,7 +7,7 @@ class Guerrero extends Personaje {
     private espadaGrande: boolean;
     private hacha: boolean;
     //constructor
-    constructor(nombre, nivel,puntosDeVida, puntosGolpe, cantidadVidas, fuerza, espadaGrande, hacha) {
+    constructor(nombre:string, nivel: number,puntosDeVida: number, puntosGolpe: number, cantidadVidas: number, fuerza: number, espadaGrande:boolean, hacha: boolean) {
         super(nombre,nivel, puntosDeVida, puntosGolpe, cantidadVidas);
         this.fuerza = fuerza;
         this.espadaGrande = espadaGrande;
@@ -28,7 +28,7 @@ class Guerrero extends Personaje {
             this.espadaGrande = true;
             this.chequearNivel();
         }
-        else if (this.nivel == 3) {
+        else if (this.nivel >= 3) {
             console.log(`Ataque ${this.nivel} de guerrero`);
             this.puntosGolpe = this.puntosGolpe + 20;
             this.fuerza = this.fuerza + 20;
@@ -36,6 +36,7 @@ class Guerrero extends Personaje {
             this.chequearNivel();
         }
     }
+
     //ataques de Guerrero
     public ataqueEspadaGrande() {
         if (this.fuerza >= 50 && this.espadaGrande == true) {
@@ -45,7 +46,6 @@ class Guerrero extends Personaje {
         }
         else {
             console.log(`tu nivel de  Fuerza es bajo no puedes ejecutar el ataque`);
-
         }
     }
 
@@ -55,9 +55,9 @@ class Guerrero extends Personaje {
             this.puntosGolpe = this.puntosGolpe + 15;
             console.log("Ataque con Hacha");
         }
-
         else { console.log(`tu nivel de Fuerza es bajo no puedes ejecutar el ataque`); }
     }
+
     //metodos: getters y setters 
     public getFuerza(): number {
         return this.fuerza;
@@ -77,7 +77,7 @@ class Guerrero extends Personaje {
     public setHacha(nuevohacha: boolean): void {
         this.hacha = nuevohacha;
     }
-    public getDatosGuerrero() {
+    public getDatosGuerrero(): string {
         return (
             `Nivel de Fuerza: ${this.getFuerza()}
         Espada Grande Desbloqeada:${this.getEspadaGrande()}

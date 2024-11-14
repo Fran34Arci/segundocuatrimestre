@@ -41,7 +41,7 @@ var Guerrero = /** @class */ (function (_super) {
             this.espadaGrande = true;
             this.chequearNivel();
         }
-        else if (this.nivel == 3) {
+        else if (this.nivel >= 3) {
             console.log("Ataque ".concat(this.nivel, " de guerrero"));
             this.puntosGolpe = this.puntosGolpe + 20;
             this.fuerza = this.fuerza + 20;
