@@ -37,16 +37,8 @@ for (var x = 0; x <= 25; x++) {
     arquero1.atacar();
     arquero1.ataqueFlechasOro();
     arquero1.ataqueFlechasPlata();
-    arquero1.atacarEvolucionado();
-    arquero1.ataqueFlechasRubi();
-    arquero1.ataqueFlechasDiamante();
-    arquero1.ataqueLlamadoLobo();
+    arquero1.getPuntosDeVida(), arquero1.getPuntosGolpe(), arquero1.getCantidadVidas(),
+        arquero1.getPrecision(), arquero1.getFlechasPlata(), arquero1.getFlechasOro();
     console.log("DATOS ARQUERO");
     console.log(arquero1.getDatos() + arquero1.getDatosArquero());
-    console.log("DATOS ARQUERO EVOLUCION");
-    console.log(arquero1.getDatosArqueroEvolucion());
 }
-console.log("DATOS ARQUERO");
-console.log(arquero1.getDatos() + arquero1.getDatosArquero());
-console.log("DATOS ARQUERO EVOLUCION");
-console.log(arquero1.getDatosArqueroEvolucion());

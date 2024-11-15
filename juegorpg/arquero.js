@@ -17,7 +17,6 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Arquero = void 0;
 var personaje_1 = require("./personaje");
-var arqueroEvo_1 = require("./arqueroEvo");
 var Arquero = /** @class */ (function (_super) {
     __extends(Arquero, _super);
     function Arquero(nombre, nivel, puntosDeVida, puntosGolpe, cantidadVidas, precision, flechasPlata, flechasOro) {
@@ -30,7 +29,6 @@ var Arquero = /** @class */ (function (_super) {
         _this.precision = precision;
         _this.flechasPlata = flechasPlata;
         _this.flechasOro = flechasOro;
-        _this.evolucion = new arqueroEvo_1.ArqueroEvolucion(false, false, false, _this);
         return _this;
     }
     //ataques de Arquero
@@ -96,27 +94,8 @@ var Arquero = /** @class */ (function (_super) {
     Arquero.prototype.setFlechasOro = function (nuevoflechasOro) {
         this.flechasOro = nuevoflechasOro;
     };
-    Arquero.prototype.getEvolucion = function () {
-        return this.evolucion;
-    };
     Arquero.prototype.getDatosArquero = function () {
         return ("Nivel de Presicion : ".concat(this.getPrecision(), "\n        Flechas de Plata Desbloqeada: ").concat(this.getFlechasPlata(), "\n        Flechas Doradas Desbloqeada: ").concat(this.getFlechasOro(), "\n    "));
-    };
-    //Funciones arqueroevolucion
-    Arquero.prototype.getDatosArqueroEvolucion = function () {
-        return this.evolucion.getDatosArqueroEvolucion();
-    };
-    Arquero.prototype.atacarEvolucionado = function () {
-        this.evolucion.atacarevo();
-    };
-    Arquero.prototype.ataqueFlechasDiamante = function () {
-        this.evolucion.ataqueFlechasDiamante();
-    };
-    Arquero.prototype.ataqueFlechasRubi = function () {
-        this.evolucion.ataqueFlechasRubi();
-    };
-    Arquero.prototype.ataqueLlamadoLobo = function () {
-        this.evolucion.ataqueLlamadoLobo();
     };
     return Arquero;
 }(personaje_1.Personaje));

@@ -1,49 +1,51 @@
 export { ArqueroEvolucion };
 import { Arquero } from './arquero';
-import { Personaje } from './personaje';
 
-class ArqueroEvolucion {
-    private flechasRubi: boolean;
-    private llamadoLobo: boolean;
-    private flechasDiamante: boolean;
-    private arquero: Arquero;
 
-    constructor(flechasRubi: boolean, llamadoLobo: boolean, flechasDiamante: boolean, arquero: Arquero) {
-        this.flechasRubi = flechasRubi;
-        this.llamadoLobo = llamadoLobo;
-        this.flechasDiamante = flechasDiamante;
-        this.arquero = arquero;
+class ArqueroEvolucion extends Arquero {
+    private flechasRubi: boolean = false;
+    private llamadoLobo: boolean = false;
+    private flechasDiamante: boolean = false;
+
+
+    constructor(nombre: string, nivel: number, puntosDeVida: number, puntosGolpe: number, cantidadVidas: number, precision: number, flechasPlata: boolean, flechasOro: boolean) {
+        super(nombre, nivel, puntosDeVida, puntosGolpe, cantidadVidas, precision, flechasPlata, flechasOro);
+        this.flechasRubi = false;
+        this.llamadoLobo = false;
+        this.flechasDiamante = false;
     }
 
+
+
     public atacarevo(): void {
-        if (this.arquero.getNivel() == 4) {
+        if (super.getNivel() == 4) {
             console.log("Ataque normal de Arquero Evolucionado");
-            this.arquero.setPuntosGolpe((this.arquero.getPuntosGolpe() + 50));
-            this.arquero.setPrecision((this.arquero.getPrecision() + 150));
-            this.arquero.chequearNivel();
+            super.setPuntosGolpe((super.getPuntosGolpe() + 50));
+            super.setPrecision((super.getPrecision() + 150));
+            super.chequearNivel();
         }
-        else if (this.arquero.getNivel() == 5) {
-            console.log(`Ataque ${this.arquero.getNivel()} de Arquero Evolucionado`);
-            this.arquero.setPuntosGolpe((this.arquero.getPuntosGolpe() + 75));
-            this.arquero.setPrecision((this.arquero.getPrecision() + 250));
+        else if (super.getNivel() == 5) {
+            console.log(`Ataque ${super.getNivel()} de Arquero Evolucionado`);
+            super.setPuntosGolpe((super.getPuntosGolpe() + 75));
+            super.setPrecision((super.getPrecision() + 250));
             this.flechasDiamante = true;
-            this.arquero.chequearNivel();
+            super.chequearNivel();
         }
-        else if (this.arquero.getNivel() >= 6) {
-            console.log(`Ataque ${this.arquero.getNivel()} de Arquero Evolucionado`);
-            this.arquero.setPuntosGolpe((this.arquero.getPuntosGolpe() + 100));
-            this.arquero.setPrecision((this.arquero.getPrecision() + 350));
+        else if (super.getNivel() >= 6) {
+            console.log(`Ataque ${super.getNivel()} de Arquero Evolucionado`);
+            super.setPuntosGolpe((super.getPuntosGolpe() + 100));
+            super.setPrecision((super.getPrecision() + 350));
             this.flechasRubi = true;
             this.llamadoLobo = true;
-            this.arquero.chequearNivel();
+            super.chequearNivel();
         }
     }
 
     //ataques de Arquero Evolucionado
     public ataqueFlechasDiamante(): void {
-        if (this.arquero.getPrecision() >= 50 && this.flechasDiamante == true) {
-            this.arquero.setPrecision((this.arquero.getPrecision() - 50));
-            this.arquero.setPuntosGolpe((this.arquero.getPuntosGolpe() + 50));
+        if (super.getPrecision() >= 50 && this.flechasDiamante == true) {
+            super.setPrecision((super.getPrecision() - 50));
+            super.setPuntosGolpe((super.getPuntosGolpe() + 50));
             console.log("Ataque con Flechas de Diamante");
         }
         else {
@@ -52,9 +54,9 @@ class ArqueroEvolucion {
     }
 
     public ataqueFlechasRubi(): void {
-        if (this.arquero.getPrecision() >= 75 && this.flechasRubi == true) {
-            this.arquero.setPrecision((this.arquero.getPrecision() - 75));
-            this.arquero.setPuntosGolpe((this.arquero.getPuntosGolpe() + 75));
+        if (super.getPrecision() >= 75 && this.flechasRubi == true) {
+            super.setPrecision((super.getPrecision() - 75));
+            super.setPuntosGolpe((super.getPuntosGolpe() + 75));
             console.log("Ataque con Flecha de Rubi");
         }
         else { console.log(`tu nivel de Precision es bajo no puedes ejecutar el ataque Flecha de Rubi`); }
@@ -62,9 +64,9 @@ class ArqueroEvolucion {
 
 
     public ataqueLlamadoLobo(): void {
-        if (this.arquero.getPrecision() >= 100 && this.llamadoLobo == true) {
-            this.arquero.setPrecision((this.arquero.getPrecision() - 100));
-            this.arquero.setPuntosGolpe((this.arquero.getPuntosGolpe() + 100));
+        if (super.getPrecision() >= 100 && this.llamadoLobo == true) {
+            super.setPrecision((super.getPrecision() - 100));
+            super.setPuntosGolpe((super.getPuntosGolpe() + 100));
             console.log("Ataque Llamado Lobo");
         }
         else { console.log(`tu nivel de Precision es bajo no puedes ejecutar el ataque Ataque Llamado Lobo`); }
@@ -93,14 +95,14 @@ class ArqueroEvolucion {
     }
 
     public getDatosArqueroEvolucion(): string {
-        return (`Nombre personaje: ${this.arquero.getNombre()}
-                      Nivel del Personaje: ${this.arquero.getNivel()}
-                      Puntos de Vida: ${this.arquero.getPuntosDeVida()}
-                      Puntos por Golpe: ${this.arquero.getPuntosGolpe()}
-                      Vidas: ${this.arquero.getCantidadVidas()}
-                      Nivel de Presicion : ${this.arquero.getPrecision()}
-                      Flechas de Plata Desbloqeada: ${this.arquero.getFlechasPlata()}
-                      Flechas Doradas Desbloqeada: ${this.arquero.getFlechasOro()}
+        return (`Nombre personaje: ${super.getNombre()}
+                      Nivel del Personaje: ${super.getNivel()}
+                      Puntos de Vida: ${super.getPuntosDeVida()}
+                      Puntos por Golpe: ${super.getPuntosGolpe()}
+                      Vidas: ${super.getCantidadVidas()}
+                      Nivel de Presicion : ${super.getPrecision()}
+                      Flechas de Plata Desbloqeada: ${super.getFlechasPlata()}
+                      Flechas Doradas Desbloqeada: ${super.getFlechasOro()}
                       Flechas de Diamante Desbloqeada : ${this.getFlechasDiamante()}
                       Flechas de Plata Desbloqeada: ${this.getFlechasRubi()}
                       Flechas Ataque Llamado de lobo: ${this.getLlamadoLobo()}

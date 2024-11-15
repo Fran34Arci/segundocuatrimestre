@@ -7,8 +7,8 @@ class Guerrero extends Personaje {
     private espadaGrande: boolean;
     private hacha: boolean;
     //constructor
-    constructor(nombre:string, nivel: number,puntosDeVida: number, puntosGolpe: number, cantidadVidas: number, fuerza: number, espadaGrande:boolean, hacha: boolean) {
-        super(nombre,nivel, puntosDeVida, puntosGolpe, cantidadVidas);
+    constructor(nombre: string, nivel: number, puntosDeVida: number, puntosGolpe: number, cantidadVidas: number, fuerza: number, espadaGrande: boolean, hacha: boolean) {
+        super(nombre, nivel, puntosDeVida, puntosGolpe, cantidadVidas);
         this.fuerza = fuerza;
         this.espadaGrande = espadaGrande;
         this.hacha = hacha;

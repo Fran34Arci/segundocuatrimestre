@@ -7,8 +7,8 @@ class Hechicero extends Personaje {
     private manaFuego: number;
     private manaTrueno: number;
     //constructor
-    constructor(nombre:string,nivel:number, puntosDeVida:number, puntosGolpe:number, cantidadVidas:number, mana:number, manaFuego:number, manaTrueno:number) {
-        super(nombre,nivel, puntosDeVida, puntosGolpe, cantidadVidas);
+    constructor(nombre: string, nivel: number, puntosDeVida: number, puntosGolpe: number, cantidadVidas: number, mana: number, manaFuego: number, manaTrueno: number) {
+        super(nombre, nivel, puntosDeVida, puntosGolpe, cantidadVidas);
         this.mana = mana;
         this.manaFuego = manaFuego;
         this.manaTrueno = manaTrueno;
